@@ -1,0 +1,9 @@
+# Estoy intentando hacer el ejercicio siguiente: Pregunta a la API de Nominatim 
+#de a dónde (calle, ciudad, ...)
+#  pertenecen estas coordenadas: 51.4965946,-0.1436476
+query.parms <- list( lat= 51.4965946, lon= -0.1436476)
+url<- ("http://nominatim.openstreetmap.org/reverse?")
+res<- GET(url, query=query.parms)
+info<- content(res)
+#llegado a este punto, "info" es un xml_document, 1.- ¿Cómo se puede explotar la información que necesito desde "info"?
+# 2.- si pudieras aclararme la diferencia entre lo que tengo en "res" y lo que tengo en "info"
